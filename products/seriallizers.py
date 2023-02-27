@@ -9,6 +9,7 @@ class ProductSerializer(serializers.ModelSerializer):
 
 class CategorySerialzer(serializers.ModelSerializer):
 
+    id = serializers.IntegerField()
     name = serializers.CharField()
     type = serializers.IntegerField()
     type_name = serializers.SerializerMethodField()
@@ -16,6 +17,7 @@ class CategorySerialzer(serializers.ModelSerializer):
 
     class Meta:
         fields = (
+            "id",
             "name",
             "type",
             "type_name"

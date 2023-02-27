@@ -17,8 +17,8 @@ class ProductViewset(ModelViewSet):
 
     def get_queryset(self):
         query_params = self.request.query_params
-        price_range = query_params.get('price_range').split(',')
-        brands = query_params.get('brands').split(',')
+        price_range = query_params.get('price_range').split(',') if  query_params.get('price_range') else None
+        brands = query_params.get('brands').split(',') if query_params.get('brands') else None
 
         price_filter = Q()
         if price_range:
