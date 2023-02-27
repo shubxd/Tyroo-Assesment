@@ -25,7 +25,6 @@ class Command(BaseCommand):
                     "type": categories_df.loc[i,'type'],
                 }
             )
-        import ipdb; ipdb.set_trace()
         products_df['brand'] = products_df.brand.apply(lambda x: Brand.objects.get(id=x))
         products_df['type'] = products_df.type.apply(lambda x: Categories.objects.get(id=x))
         
