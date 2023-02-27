@@ -9,3 +9,5 @@ Steps:
 6. if not for step 5, or after step 5 use post apis mentioned in the api collection named: tyroo_assesment.postman_collection.json
 7. use signup api to create your account, use login api to get jwt tokens, in case tokens get expired, use refresh token api for getting new jwt. in case of logout, refresh token is blacklisted.
 8. all apis are ready to use.
+
+Note: exception handling and status handling is managed by drf in this project
