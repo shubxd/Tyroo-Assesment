@@ -9,7 +9,7 @@ class ProductSerializer(serializers.ModelSerializer):
 
 class CategorySerialzer(serializers.ModelSerializer):
 
-    id = serializers.IntegerField()
+    id = serializers.IntegerField(read_only=True)
     name = serializers.CharField()
     type = serializers.IntegerField()
     type_name = serializers.SerializerMethodField()
@@ -30,6 +30,12 @@ class CategorySerialzer(serializers.ModelSerializer):
 
 class BrandSerializer(serializers.ModelSerializer):
 
+    id = serializers.IntegerField(read_only=True)
+    name = serializers.CharField()
+
     class Meta:
-        fields = "__all__"
+        fields = (
+            'id',
+            'name'
+        )
         model = Brand
