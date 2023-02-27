@@ -8,7 +8,9 @@ from rest_framework import status
 
 
 class RegisterUser(APIView):
-
+    """
+        signup api
+    """
     def post(self, request):
         username = request.data['username']
         password = request.data['password']
@@ -28,6 +30,9 @@ class RegisterUser(APIView):
 
 
 class LogoutView(APIView):
+    """
+        logout api
+    """
     permission_classes = (IsAuthenticated,)
 
     def post(self, request):
