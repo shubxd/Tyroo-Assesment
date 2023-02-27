@@ -1,1 +1,10 @@
 # Tyroo-Assesment
+
+Steps:
+1. Take pull of the master branch for above project and create a virtual environment
+2. install requirements.txt given
+3. run command: python manage.py migrate
+4. to run server: python manage.py runserver
+5. to insert data, python manage.py data_insert first
+6. if not for step 5, or after step 5 use post apis mentioned in the api collection named: tyroo_assesment.postman_collection.json
+7. Project is ready to go
