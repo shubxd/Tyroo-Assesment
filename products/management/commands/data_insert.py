@@ -7,6 +7,9 @@ from products.models import Brand, Categories, Product
 
 
 class Command(BaseCommand):
+    """
+        script to insert data into db
+    """
 
     cwd = os.getcwd()
 
